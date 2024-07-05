@@ -58,7 +58,7 @@
   <div class="section green">
     <h3>What you will need</h3>
     <ul>
-      <li>A USB drive with at least 1 GB of storage</li>
+      <li>A USB drive or SD card with at least 1 GB of storage</li>
       <li>
         <u onclick="alert(messages.pc)">A personal computer or Chromebook;</u> note that you
         need admin perms on Windows/MacOS
@@ -73,7 +73,7 @@
       <u onclick="alert(messages.board)">a variety of other methods</u>.
     </p>
     <p>
-      If your board name is in the list below, your board has a publicly leaked RMA shim. If it's not, you'll have to
+      If your board name is in the list below, your board has a publicly leaked RMA shim, duh. If it's not, you'll have to
       source it
       on your own... somehow.
     </p>
@@ -82,7 +82,7 @@
     pyro, reks, sentry, stout, strongbad, tidus, ultima, volteer, zork
     <p>
       First you need to download a SH1MMER bin at
-      <a href="https://dl.sh1mmer.me">dl.sh1mmer.me</a>
+      <a href="https://dl.sasquatch9228.dev">dl.sasquatch9228.dev</a>
       (or any other source)
     </p>
     <p>
@@ -114,8 +114,9 @@
       speed of your USB drive.
     </p>
     <i>
-      You can also use tools such as Rufus, BalenaEtcher, etc, to flash
-      on Windows. If you're on Linux, <kbd>dd</kbd> is recommended.
+      You can also use a tool such as Rufus, BalenaEtcher, or Win32DiskImager
+      to flash on Windows, as these often work better than the Chromebook Recovery
+      Utility. If you're on Linux, <kbd>dd</kbd> is recommended.
     </i>
     <hr />
     <h3>Executing on Chromebook</h3>
@@ -128,7 +129,7 @@
     <img src="assets/recover_white.png" style="width: auto; height: 350px" alt="Recovery mode (old UI)" />
     <p>Press <kbd>CTRL + D</kbd> on this screen, then press enter.</p>
     <p>
-      It will now say something about "returning to secure mode" or that "OS
+      It will now say something about "confirm returning to secure mode" or that "OS
       verification is off". You will not actually be in developer mode,
       but the exploit will work regardless. Your screen should look like one
       of the images below:
@@ -157,7 +158,7 @@
         Note that while unenrolled, it is recommended to add your personal
         account first, then add your school account, then switch between the two
         as needed. Mercury Workshop does not condone the use of SH1MMER or
-        unenrolling to cheat in school.
+        unenrolling to cheat or plagiarize in school.
       </p>
       <p>
         The biggest challenges with unenrolling are connecting to the school
@@ -180,7 +181,8 @@
       <p>
         To take a kiosk exam, the safest option is to re-enroll temporarily.
         Instructions for doing that are hosted
-        <a href="assets/kiosks.txt">at this TXT file</a>. Saving a copy of this file
+        <a href="assets/kiosks.txt">at this TXT file</a>, or here: <a href="kiosks.html" 
+        target="_self">Kiosk Instructions</a>. Saving a copy of this file
         for future reference is probably a smart move.
       </p>
       <p>
@@ -200,13 +202,13 @@
     </p>
     <p>
       If you aren't willing to take apart your chromebook to unenroll, you can use an affiliated project,
-      <a href="https://fog.gay">E-HALCYON</a> to boot into a deprovisioned environment temporarily.
+      <a href="https://e-halcyon.vercel.app">E-HALCYON</a> to boot into a deprovisioned environment temporarily.
     </p>
     <p>
       If you are willing to take apart your Chromebook to unenroll, then go to the guides
       here: <a href="unpatch.html" target="_self" >Unpatch</a> and <a href="unfog.html" target="_self" >Unfog</a>
       <br>
-      Also see Darkn's great blog post <a href="https://blog.darkn.bio/blog/the-tsunami">here</a> for the "pencil exploit".
+      Also, see Darkn's great blog post <a href="https://blog.darkn.bio/blog/the-tsunami">here</a> for the "pencil exploit".
     </p>
     </div>
   </div>
@@ -224,8 +226,11 @@
       For actual support, there is (begrudgingly) a
       <a href="https://discord.gg/bAgNyGpXSx">Discord Server</a> as well.<br />
 
-      For the source code of SH1MMER, go to the
+      For the source code of SH1MMER (Mercury Workshop), go to the
       <a href="https://github.com/MercuryWorkshop/sh1mmer">GitHub</a>.<br />
+
+      For the source code of SH1MMER (sh1mmer.sasquatch9228.dev), go th the
+      <a href="https://github.com/Sasquatch9228/sh1mmer-rehost">here.</a>
     </p>
   </div>
 </body>
