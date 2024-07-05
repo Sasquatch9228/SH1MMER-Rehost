@@ -128,6 +128,12 @@ button {
   transition: filter 250ms;
 }
 
+.kioskfooter {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
 a:not(.disabled):hover,
 button:not(.disabled):hover {
   filter: brightness(80%);
@@ -185,6 +191,12 @@ ul {
   white-space: pre;
 }
 
+.buildlabel {
+  font-family: monospace;
+  font-size: 15px;
+  text-align: center;
+}
+
 #linuxOutput {
   padding: 10px;
   display: flex !important;
@@ -194,9 +206,9 @@ ul {
 }
 
 .waxfooter {
-  margin-top: 50px;
+  margin-top: 40px;
   text-align: center;
-  font-size: 25px;
+  font-size: 15px;
 }
 
 #waxOptions {
