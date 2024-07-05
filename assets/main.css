@@ -165,9 +165,13 @@ ul {
 }
 
 .builderlog * {
+  font-family: monospace;
 }
 
 .builderlog {
+  border-radius: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
   font-family: monospace;
   color: white;
   background-color: black;
@@ -182,9 +186,11 @@ ul {
 }
 
 #linuxOutput {
+  padding: 10px;
   display: flex !important;
   flex-direction: column;
   justify-content: flex-end;
+  font-family: monospace;
 }
 
 .waxfooter {
@@ -203,12 +209,13 @@ ul {
 #waxOptions input[type=checkbox] {
   transform: scale(1.5);
   cursor: pointer;
-  accent-color: #0f9931;
+  accent-color: #d3c5ff;
   vertical-align: baseline;
 }
 
 #waxOptions label {
   font-size: 20px;
+  text-align: center;
 }
 
 #waxOptions span {
