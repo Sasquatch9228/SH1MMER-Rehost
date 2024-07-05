@@ -126,12 +126,12 @@ then you can ignore this and follow the normal instructions. If not, unenrollmen
 
 If your Chromebook is on version 112 or 113, unenrollment is still possible if you're willing to [disable hardware write protection]("https://mrchromebox.tech/#devices).
 On most devices, this will require you to take off the back of the Chromebook and unplug the battery, or jump two pins.
-Further instructions are on [the website](https://sh1mmer.me/#fog).
+Further instructions are on [the website](https://sh1mmer.sasquatch9228.dev/#fog).
 
 #### "Unenrolling" with Write Protection
 
 If you aren't willing to take apart your Chromebook to unenroll, you can use an affiliated project,
-[E-Halcyon](https://fog.gay) to boot into an unenrolled environment temporarily.
+[E-Halcyon](https://e-halcyon.vercel.app) to boot into an unenrolled environment temporarily.
 This will bypass both issues of The Fog and The Tsunami, however further caveats are listed on the website.
 
 </details>
@@ -140,7 +140,7 @@ This will bypass both issues of The Fog and The Tsunami, however further caveats
 
 Disabling write protection has also been patched by Google™️.
 If your Chromebook has never updated to version 114 (or newer) before (check in `chrome://version`),
-then you can ignore this and follow the [Unpatch](https://sh1mmer.me/#fog:~:text=v111) instructions. If not, disabling 
+then you can ignore this and follow the [Unpatch](https://sh1mmer.sasquatch9228.dev/#fog:~:text=v111) instructions. If not, disabling 
 write protection will not work as normal.
 
 <details>
