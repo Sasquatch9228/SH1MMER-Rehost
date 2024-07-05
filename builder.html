@@ -18,34 +18,54 @@
 <body>
   <div class="header">
     <h1>Wax4Web</h1>
-    <a href="." target="_self">Back to home</a>
+    <h3>a simple and easy to use mini SH1MMER builder</h3>
+    <a href="." target="_self">Back to the homepage</a>
   </div>
   <div class="section blue" id="wax4webDirectionsContainer">
-    <h3>What happened?</h3>
-    <p>
-      On July 11, 2023, we at Mercury Workshop 
-      received a notice from Google, informing us 
-      to take down both the downloads for the SH1MMER 
-      bins and the website builder.
-    </p>
-    <p>
-      Not wanting to deal with the legality of it all,
-      we had no choice but to comply with what they 
-      requested from us, and the builder &amp; bins have 
-      been taken offline.
-    </p>
-    <p>
-      This doesn't mark the end of things, but it does
-      mean that we can no longer provide a place for users
-      to download SH1MMER bins nor build a injected shim.
-    </p>
-    <p>
-      For more information, check the <a href=
-      "https://discord.gg/egWXwEDWKP">
-      Discord Server</a>.
-    </p>
-  </div>
-  <div class="section green" id="wax4webEmulatorContainer"></div>
+    <div class="section blue">
+      <h3>Instructions</h3>
+      <p>
+        See the directions at <a href="/index.html" target="_self">home</a> on how to find a shim for your device.
+        If there isn't a shim for your device, then good luck finding one.. somehow.
+      </p>
+      <p>
+        Once you've found your shim, make sure to extract it if it's in a <kbd>.zip</kbd> file. If it has 
+        any other kind of compression (.gz, .bz2, .xz, etc) make sure you decompress the file first.
+      </p>
+      <p>
+        Before pressing the start button, you may select or deselect any of the options below.
+      </p>
+      <p>
+        Next, hit the start button and select your <kbd>.bin</kbd> file. The VM will start up. This will use a
+        considerable amount of memory on your system and take a while. If it freezes, that's normal. Once it
+        finishes, it will automatically download the patched version.
+      </p>
+    <br />
+    <div class="section green-builder">
+      <div id="waxOptions">
+        <label><input type="checkbox" name="legacy"> <span>Legacy</span> <i>CLI, more updated & features</i></label>
+        <label><input type="checkbox" name="payloads" checked> <span>Payloads</span> <i>Include extra payloads</i></label>
+        <label><input type="checkbox" name="fast" checked> <span>Fast</span> <i>Reduce build time (but larger file)</i></label>
+        <label><input type="checkbox" name="debug"> <span>Debug</span> <i>Show debug messages</i></label>
+      </div>
+      <a href="javascript:void(0)" target="_self" class="waxbutton disabled" id="startButton">Start</a>
+      <a href="javascript:void(0)" target="_self" class="waxbutton" id="downloadButton" style="display: none;">Download</a>
+      <div id="displayContainer">
+        <div>
+          <div class="buildlabel">Linux Output</div>
+          <div id="screen_container">
+            <div id="linuxOutput" class="builderlog"></div>
+            <canvas style="display: none;"></canvas>
+          </div>
+        </div>
+        <div>
+          <div class="buildlabel">Main Output</div>
+          <div id="waxOutput" class="builderlog"></div>
+        </div>
+      </div>
+      <div class="waxfooter">• Wax4Web is powered by <a href="https://github.com/buildroot/buildroot">Buildroot</a>
+      and <a href="https://github.com/copy/v86">v86</a> •</div>
+    </div>  
 </body>
 
 </html>
