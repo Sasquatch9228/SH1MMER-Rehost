@@ -8,7 +8,7 @@ _Website, source tree, and write-up for a ChromeOS™️ enrollment jailbreak_
 ## What is SH1MMER?
 
 **SH1MMER** is an exploit found in the ChromeOS shim kernel that utilitzes modified RMA factory shims to gain code execution at recovery.
-_For more info, check out the blog post/writeup [here](https://blog.coolelectronics.me/breaking-cros-2/)_.
+_For more info, check out the blog post/writeup [here](https://blog.coolelectronics.me/breaking-cros-2/)_ by CoolElectronics.
 
 #### How does it work?
 
@@ -26,7 +26,7 @@ First, you need to know your Chromebook's board. Go to `chrome://version` on you
 If `chrome://version` is blocked, you can search up your Chromebook's model name on [chrome100](https://chrome100.dev)
 and see what board it corresponds to. **DO NOT DOWNLOAD A RECOVERY IMAGE FROM [chrome100](https://chrome100.dev), IT WILL NOT WORK.**
 
-If your board name is in the list below, great! Find the RAW RMA shim corresponding to your board online.
+If your Chromebook board name is in the list below, great! Find the RAW RMA shim corresponding to your board online.
 We can no longer provide raw RMA shims due to legal reasons. [**More information here**](https://discord.gg/egWXwEDWKP).
 
 ambassador, brask, brya, clapper, coral, corsola, dedede, enguarde, glimmer,
@@ -41,7 +41,7 @@ If it's not, good luck. You'll have to try and call up your OEM and demand the f
 
 <!--
 > [!IMPORTANT]
-> If you're using `coral`, `hana`, or some other older (pre-frecon) boards: <br />
+> If you're using `coral`, `hana`, or some other older (pre-frecon) Chromebook boards: <br />
 > **DO NOT FOLLOW THESE INSTRUCTIONS!** Instead, skip to the "[Building A Legacy Shim](#building-a-legacy-shim)" section.
 -->
 
@@ -50,16 +50,16 @@ You need to be on Linux or WSL2 and have the following packages installed: `git`
 You may need to install additional packages, which the script will prompt you to do.
 
 ```
-git clone https://github.com/MercuryWorkshop/sh1mmer
+git clone https://github.com/Sasquatch9228/SH1MMER-Rehost
 cd sh1mmer/wax
 sudo bash wax.sh -i path/to/the/shim/you/downloaded.bin
 ```
 This will build a beautiful world mini shim. If you want to add chromebrew, do the following:
 
 ```
-git clone https://github.com/MercuryWorkshop/sh1mmer
+git clone https://github.com/Sasquatch9228/SH1MMER-Rehost
 cd sh1mmer/wax
-wget https://dl.darkn.bio/api/raw/?path=/Chromebrew/chromebrew.tar.gz
+wget https://dl.sasquatch9228.dev/api/raw/?path=/Chromebrew/chromebrew.tar.gz
 sudo bash wax.sh -i path/to/the/shim/you/downloaded.bin --chromebrew chromebrew.tar.gz -s 4G
 ```
 
@@ -78,19 +78,19 @@ After injecting, you may continue to the "[Booting Into A Shim](#booting-into-a-
 
 ### Building A Legacy Shim
 
-The factory shims for boards such as `hana` or `coral` were built before graphics support was added into the tty.
+The factory shims for Chromebook boards such as `hana` or `coral` were built before graphics support was added into the tty.
 This makes it impossible for the Beautiful World GUI to work and thus a legacy CLI-only shim must be built.
 
 Type out all of these commands in the terminal.
 
 ```
-git clone https://github.com/MercuryWorkshop/sh1mmer
+git clone https://github.com/Sasquatch9228/SH1MMER-Rehost
 cd sh1mmer/wax
 sudo bash wax.sh -i path/to/the/shim/you/downloaded.bin -p legacy
 ```
 
 > [!NOTE]
-> Building a legacy shim will work on **ALL BOARDS.** Legacy shims are easier to update and are
+> Building a legacy shim will work on **ALL CHROMEBOOK BOARDS.** Legacy shims are easier to update and are
 > recommended for advanced users and developers.
 
 When this finishes, the bin file in the path you provided will have been converted into a **SH1MMER** image.
@@ -102,16 +102,16 @@ After injecting, you may continue to the "[Booting Into A Shim](#booting-into-a-
 
 ### Booting Into A Shim
 
-Once you have injected your raw shim with SH1MMER, go into the Chromebook Recovery Utility, select the settings icon (⚙️), select `Use local image`, and then select your injected shim.
+Once you have injected your raw shim with SH1MMER, go into the Chromebook Recovery Utility extension, select the settings icon (⚙️), select `Use local image`, and then select your injected shim.
 Alternatively, you can also use other flashers such as [BalenaEtcher](https://etcher.balena.io/), [Rufus](https://rufis.ie), [UNetbootin](https://unetbootin.github.io/), and etc.
-*This may take up to 10 minutes, depending on the size of your shim and speed of your USB drive.*
+*This may take up to 20 minutes, depending on the size of your shim and speed of your USB drive.*
 
 On the Chromebook, press `ESC + Refresh (↻) + Power (⏻)` at the same time to enter the recovery screen, then press `CTRL + D` at the same time and press Enter.
 This should enable Developer Mode or turn off OS Verification.
 *This may be blocked by system policy, but that doesn't matter.*
 
 Press `ESC + Refresh (↻) + Power (⏻)` at the same time again, then plug in your USB with SH1MMER and you should be booting into the Beautiful World GUI or a CLI screen.
-From here, you can play around with the options and do what you want.
+From here, you can play around with the options and UI and do what you want.
 
 ***
 
@@ -146,7 +146,7 @@ write protection will not work as normal.
 <details>
 <summary>Tsunami Bypass Details</summary>
 
-If your Chromebook is below ChromeOS version 120, unenrollment is still possible by using [cryptosmite](https://github.com/FWSmasher/CryptoSmite).
+If your Chromebook is below ChromeOS version 120, unenrollment is still possible by using [CryptoSmite](https://github.com/FWSmasher/CryptoSmite).
 Cryptosmite is now included as an extra payload for all shims.
 
 </details>
