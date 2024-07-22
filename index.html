@@ -58,12 +58,12 @@
 
   </div>
   <div class="section green">
-    <h3>What you will need</h3>
+    <h3>What you will need for this exploit</h3>
     <ul>
       <li><u onclick="alert(messages.drive); ">A USB drive or SD card;</u> with at least 8 GB of storage that is required for booting into SH1MMER</li>
       <li>
         <u onclick="alert(messages.pc)">A personal computer or Chromebook;</u> note that you
-        need admin perms on Windows/MacOS
+        need administrator permissions on Windows/MacOS
       </li>
     </ul>
     <hr />
@@ -92,7 +92,7 @@
       <a href="builder.html" target="_self">SH1MMER Web Builder</a><br />
       You can also use the desktop version of wax for linux/WSL, located in the
       <a href="https://github.com/Sasquatch9228/SH1MMER-Rehost">GitHub</a> repository.<br />
-      Once you've obtained a INJECTED SHIM (NOT A RAW SHIM), you can continue.
+      Once you've obtained a MODIFIED/INJECTED SHIM (NOT A RAW SHIM), you can continue.
     </p>
     <p>
       Download the
@@ -132,7 +132,7 @@
     <p>Press <kbd>CTRL + D</kbd> on this screen, then press enter.</p>
     <p>
       It will now say something about "confirm returning to secure mode" or that "OS
-      verification is off". You will not actually be in developer mode,
+      verification is off". You will not actually be in the developer mode,
       but the exploit will work regardless. Your screen should now look like one
       of the images below:
     </p>
@@ -154,7 +154,8 @@
       <p>
         You will now be able to, among other things, unenroll your Chromebook.
         It will now behave entirely as if it is a personal computer and no
-        longer contain spyware or blocker extensions.
+        longer contain spyware or blocker extensions. After you do this and get past the "<b>determining device configuration</b>" screen, 
+        you will be able to actually turn developer mode on.
       </p>
       <p>
         Note that while unenrolled, it is recommended to add your personal
@@ -192,7 +193,7 @@
       <p>
         You can also use <a href="https://github.com/MercuryWorkshop/fakemurk">fakemurk</a>
         as a way to enroll your device but stay in developer mode and have control
-        over policies and extensions. You may need to use this to get WiFi passwords
+        over policies and extensions. You may need to use this to get Wi-Fi passwords
         if <kbd>chrome://net-export</kbd> is blocked.
       </p>
     <hr />
@@ -208,6 +209,30 @@
       If you aren't willing to take apart your chromebook to unenroll, you can use an affiliated project,
       <a href="https://e-halcyon.vercel.app">E-HALCYON</a> to boot into a deprovisioned environment temporarily.
     </p>
+    <hr />
+    <h3>How to use the SH1MMER exploit on version 111 → version 113</h3>
+    <h4>(if you're willing to take the back cover off your Chromebook)</h4>
+    <p>
+    You only need to do this once, and it will let you use the SH1MMER exploit even after it's been completely patched.
+    </p>
+    <div class="section blue-kiosk">
+    <p>
+    <li>Unplug everything, open the back panel, disconnect the battery to disable Write Protection, plug in the charger.</li> 
+    <li>Boot into SH1MMER and use "Un-Enroll / Deprovision" (yes it will show an error, but that doesn't matter)</li>
+    (you will also need to run "<kbd>Disable block_devmode</kbd>" if you are using the old legacy version).
+    <li>Go to the bash shell and run this command: <kbd>/usr/share/vboot/bin/set_gbb_flags.sh 0x8090</kbd>. Do not use "<kbd>Reset GBB Flags</kbd>" after this.</li>
+    <li>Exit SH1MMER, unplug everything, reconnect the battery, and reconnect the charger.</li>
+    <li>Boot up and press <kbd>CTRL + D</kbd> to enter the ChromeOS developer mode.</li>
+    <li>When this step is completed, use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook.</li>
+    <li>After powerwashing the Chromebook, immediately enter VT2 with <kbd>CTRL + ALT + F2 (→)</kbd>, login as "<kbd>root</kbd>" and run these two commands:</li>
+    <p>
+    <kbd>tpm_manager_client take_ownership<br>cryptohome --action=remove_firmware_management_parameters</kbd>
+    </p>
+    If it fails, try downgrading to version 110 if possible. If you cannot do so, use E-Halcyon instead.
+    <li>Press <kbd>CTRL + ALT + F1 (←)</kbd>, and use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook once more.</li>
+    </p>
+    </div>
+    <li><b>IMPORTANT NOTE:</b> If you have a <kbd>dedede</kbd> board, your Write Protection method is probably different. Look your model up online to find the WP method.</li>
     <p>
       If you are willing to take apart your Chromebook to unenroll, then go to the guides
       here: <a href="unpatch.html" target="_self" >Unpatch</a> and <a href="unfog.html" target="_self" >Unfog</a>.
