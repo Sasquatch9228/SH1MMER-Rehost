@@ -218,23 +218,23 @@
     </p>
     <div class="section blue-kiosk">
     <p>
-    1. Unplug everything, open the back panel, disconnect the battery to disable Write Protection, plug in the charger.
-    2. Boot into SH1MMER and use "Un-Enroll / Deprovision" (yes it will show an error, but that doesn't matter)
-    (you will also need to run "<kbd>Disable block_devmode</kbd>" if you are using the old legacy version).
-    3. Go to the bash shell and run this command: <kbd>/usr/share/vboot/bin/set_gbb_flags.sh 0x8090</kbd>. Do not use "<kbd>Reset GBB Flags</kbd>" after this.
-    4. Exit SH1MMER, unplug everything, reconnect the battery, and reconnect the charger.
-    5. Boot up and press <kbd>CTRL + D</kbd> to enter the ChromeOS developer mode.
-    6. When this step is completed, use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook.
-    7. After powerwashing the Chromebook, immediately enter VT2 with <kbd>CTRL + ALT + F2 (→)</kbd>, login as "<kbd>root</kbd>" and run these two commands:
+    <p>1. Unplug everything, open the back panel, disconnect the battery to disable Write Protection, plug in the charger.</p>
+    <p>2. Boot into SH1MMER and use "Un-Enroll / Deprovision" (yes it will show an error, but that doesn't matter)
+    (you will also need to run "<kbd>Disable block_devmode</kbd>" if you are using the old legacy version).</p>
+    <p>3. Go to the bash shell and run this command: <kbd>/usr/share/vboot/bin/set_gbb_flags.sh 0x8090</kbd>. Do not use "<kbd>Reset GBB Flags</kbd>" after this.</p>
+    <p>4. Exit SH1MMER, unplug everything, reconnect the battery, and reconnect the charger.</p>
+    <p>5. Boot up and press <kbd>CTRL + D</kbd> to enter the ChromeOS developer mode.</p>
+    <p>6. When this step is completed, use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook.</p>
+    <p>7. After powerwashing the Chromebook, immediately enter VT2 with <kbd>CTRL + ALT + F2 (→)</kbd>, login as "<kbd>root</kbd>" and run these two commands:</p>
     <p>
     <kbd>tpm_manager_client take_ownership</kbd>
     <kbd>cryptohome --action=remove_firmware_management_parameters</kbd>
     </p>
-    If it fails, try downgrading to version 110 if possible. If you cannot do so, use E-Halcyon instead.
-    8. Press <kbd>CTRL + ALT + F1 (←)</kbd>, and use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook once more.
+    <p>If it fails, try downgrading to version 110 if possible. If you cannot do so, use E-Halcyon instead.</p>
+    <p>8. Press <kbd>CTRL + ALT + F1 (←)</kbd>, and use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook once more.</p>
     </p>
     </div>
-    <b>IMPORTANT NOTE:</b> If you have a <kbd>dedede</kbd> board, your Write Protection method is probably different. Look your model up online to find the WP method.
+    <p><b>IMPORTANT NOTE:</b> If you have a <kbd>dedede</kbd> board, your Write Protection method is probably different. Look your model up online to find the WP method.</p>
     <p>
     This just is a shortened version of the instructions for the <a href="unpatch.html" target="_self" >Unpatch</a> section, duh. If you want the full instructions, go the the section linked below.
     </p>
