@@ -85,7 +85,8 @@
     <p>
       First you need to download a SH1MMER bin at
       <a href="https://dl.sasquatch9228.dev">dl.sasquatch9228.dev</a>
-      (or any other source)
+      (or any other source), since the original domain; <a href="https://dl.sh1mmer.me">dl.sh1mmer.me</a>
+      was taken down by Google beacuse of legal reasons.
     </p>
     <p>
       Then build an injected shim using your bin at the
@@ -104,7 +105,7 @@
       <u onclick="alert(messages.launch)">launch the recovery utility</u>
       and plug your USB drive into your personal computer.
     </p>
-    <i>IMPORTANT: Your USB drive will be completely erased and partitioned.</i>
+    <i>IMPORTANT NOTE: Your USB drive will be completely erased and partitioned.</i>
     <p>
       In the recovery utility window, click the settings icon (⚙) and press "Use
       local image".
@@ -217,22 +218,26 @@
     </p>
     <div class="section blue-kiosk">
     <p>
-    <li>Unplug everything, open the back panel, disconnect the battery to disable Write Protection, plug in the charger.</li> 
-    <li>Boot into SH1MMER and use "Un-Enroll / Deprovision" (yes it will show an error, but that doesn't matter)</li>
+    1. Unplug everything, open the back panel, disconnect the battery to disable Write Protection, plug in the charger.
+    2. Boot into SH1MMER and use "Un-Enroll / Deprovision" (yes it will show an error, but that doesn't matter)
     (you will also need to run "<kbd>Disable block_devmode</kbd>" if you are using the old legacy version).
-    <li>Go to the bash shell and run this command: <kbd>/usr/share/vboot/bin/set_gbb_flags.sh 0x8090</kbd>. Do not use "<kbd>Reset GBB Flags</kbd>" after this.</li>
-    <li>Exit SH1MMER, unplug everything, reconnect the battery, and reconnect the charger.</li>
-    <li>Boot up and press <kbd>CTRL + D</kbd> to enter the ChromeOS developer mode.</li>
-    <li>When this step is completed, use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook.</li>
-    <li>After powerwashing the Chromebook, immediately enter VT2 with <kbd>CTRL + ALT + F2 (→)</kbd>, login as "<kbd>root</kbd>" and run these two commands:</li>
+    3. Go to the bash shell and run this command: <kbd>/usr/share/vboot/bin/set_gbb_flags.sh 0x8090</kbd>. Do not use "<kbd>Reset GBB Flags</kbd>" after this.
+    4. Exit SH1MMER, unplug everything, reconnect the battery, and reconnect the charger.
+    5. Boot up and press <kbd>CTRL + D</kbd> to enter the ChromeOS developer mode.
+    6. When this step is completed, use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook.
+    7. After powerwashing the Chromebook, immediately enter VT2 with <kbd>CTRL + ALT + F2 (→)</kbd>, login as "<kbd>root</kbd>" and run these two commands:
     <p>
-    <kbd>tpm_manager_client take_ownership<br>cryptohome --action=remove_firmware_management_parameters</kbd>
+    <kbd>tpm_manager_client take_ownership</kbd>
+    <kbd>cryptohome --action=remove_firmware_management_parameters</kbd>
     </p>
     If it fails, try downgrading to version 110 if possible. If you cannot do so, use E-Halcyon instead.
-    <li>Press <kbd>CTRL + ALT + F1 (←)</kbd>, and use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook once more.</li>
+    8. Press <kbd>CTRL + ALT + F1 (←)</kbd>, and use <kbd>CTRL + ALT + SHIFT + R</kbd> to powerwash the Chromebook once more.
     </p>
     </div>
-    <li><b>IMPORTANT NOTE:</b> If you have a <kbd>dedede</kbd> board, your Write Protection method is probably different. Look your model up online to find the WP method.</li>
+    <b>IMPORTANT NOTE:</b> If you have a <kbd>dedede</kbd> board, your Write Protection method is probably different. Look your model up online to find the WP method.
+    <p>
+    This just is a shortened version of the instructions for the <a href="unpatch.html" target="_self" >Unpatch</a> section, duh. If you want the full instructions, go the the section linked below.
+    </p>
     <p>
       If you are willing to take apart your Chromebook to unenroll, then go to the guides
       here: <a href="unpatch.html" target="_self" >Unpatch</a> and <a href="unfog.html" target="_self" >Unfog</a>.
