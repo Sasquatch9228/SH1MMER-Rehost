@@ -29,9 +29,8 @@ and see what board it corresponds to. **DO NOT DOWNLOAD A RECOVERY IMAGE FROM [c
 If your Chromebook board name is in the list below, great! Find the RAW RMA shim corresponding to your board online.
 We can no longer provide raw RMA shims due to legal reasons. [**More information here**](https://discord.gg/egWXwEDWKP).
 
-ambassador, brask, brya, clapper, coral, corsola, dedede, enguarde, glimmer,
-grunt, hana, hatch, jacuzzi, kefka, kukui, lulu, nami, nissa, octopus, orco,
-pyro, reks, sentry, stout, strongbad, tidus, ultima, volteer, zork
+ambassador, banon, brask, brya, clapper, coral, corsola, cyan, dedede, edgar, elm, enguarde, fizz, glimmer, grunt, hana, hatch, jacuzzi, 
+kalista, kefka, kukui, lulu, nami, nissa, octopus, orco, puff, pyro, reef, reks, relm, sand, sentry, stout, strongbad, tidus, trogdor, ultima, volteer, zork 
 
 If it's not, good luck. You'll have to try and call up your OEM and demand the files from them, which they are most unlikely to give to you.
 
